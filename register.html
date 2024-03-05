@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        .shad1{
+           
+            height:450px;
+            width:300px;
+            margin:150px auto;
+            border-style:solid;
+            box-sizing:border-box;
+            border-color: rgb(19, 67, 116);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 
+              0 0 10px rgba(0, 0, 0, 0.5), 
+              0 0 10px rgba(0, 0, 0, 0.5), 
+              0 0 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            
+        }
+        .div1{
+            margin-left: 30px;
+            color: white;
+        }
+        label{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body style="background-image: url(./assets/register.jpg);background-repeat: no-repeat;background-size: 100%;">
+    <div class="shad1">
+
+        <br><br>
+        
+        <center>
+        <button style="background: transparent;height:30px;border-radius: 5px;color: white;"><b>REGISTER HERE</b></button>
+        </center>
+        <div class="div1">
+        <form>
+            <br>
+            <label for="username"><b>Username</b></label>
+            <br>
+            <input type="text" placeholder="Email or Phone" id="username" style="height: 25px;width:220px;background:lightblue;">
+            <p id="p1" style="visibility:hidden ;"><b>!!!Pls Give the Username</b></p>
+            <label for="password"><b>Password</b></label>
+            <br>
+            <input type="password" placeholder="Password" id="password" style="height: 25px;width:220px;background:lightblue;">
+            <p id="p2" style="visibility: hidden;"><b>!!!Pls Give the Password</b></p>
+            <label for="cpassword"><b>Confirm Password</b></label>
+            <br>
+            <input type="password" placeholder="Password" id="cpassword" style="height: 25px;width:220px;background:lightblue;">
+            <p id="p3" style="visibility:hidden;"><b>!!!Pls Confirm Your Password</b></p>
+        </form>
+        <center>
+            <button style="background: transparent;height:30px;border-radius: 5px;color: white;margin-right: 10px;" onclick="sub()"><b>Register</b></button>
+        </center>  
+            
+        </div>
+    </div>
+    <script>
+        function sub(){
+            var a=document.getElementById("username").value;
+            var b=document.getElementById("password").value;
+            var c=document.getElementById("cpassword").value;
+
+        
+            if(a==""){
+                document.getElementById("p1").style.color="red";
+                document.getElementById("p1").style.visibility="visible";
+            }
+            else{
+                document.getElementById("p1").style.visibility="hidden";
+            }
+
+            if(b==""){
+                document.getElementById("p2").style.color="red";
+                document.getElementById("p2").style.visibility="visible";
+            }
+            else{
+                document.getElementById("p2").style.visibility="hidden";
+            }
+
+            if(c==""){
+                document.getElementById("p3").style.color="red";
+                document.getElementById("p3").style.visibility="visible";
+            }
+            else{
+                document.getElementById("p3").style.visibility="hidden";
+            }
+
+            if(b!=c){
+                document.getElementById("p3").style.visibility="visible";
+                document.getElementById("p3").style.color="red";
+                document.getElementById("p3").innerHTML="Passwords are not matching";
+            }
+        }
+    </script>
+</body>
+</html>
