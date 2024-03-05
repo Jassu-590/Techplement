@@ -1,0 +1,998 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Courses</title>
+    <style>
+      #div1{
+       overflow-x: scroll;
+       white-space: nowrap;
+      }
+      .angcontent{
+        display:none
+      }
+      .angcontent:target{
+        display: block;
+      }
+      .dscontent{
+        display:none
+      }
+      .dscontent:target{
+        display: block;
+      }
+      .rscontent{
+        display:none
+      }
+      .rscontent:target{
+        display: block;
+      }
+      .htcontent{
+        display:none
+      }
+      .htcontent:target{
+        display: block;
+      }
+      .cscontent{
+        display:none
+      }
+      .cscontent:target{
+        display: block;
+      }
+      .mscontent{
+        display:none
+      }
+      .mscontent:target{
+        display: block;
+      }
+      .jscontent{
+        display:none
+      }
+      .jscontent:target{
+        display: block;
+      }
+      .pycontent{
+        display:none
+      }
+      .pycontent:target{
+        display: block;
+      }
+      .jacontent{
+        display:none
+      }
+      .jacontent:target{
+        display: block;
+      }
+     
+    </style>
+</head>
+<body>
+
+    <!--Header-->
+    <section >
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-4 col-s-4">
+            <img src="./assets/Designer.png" alt="" height="80px;">
+        </div>
+        <div class="col-lg-4 col-s-4 ps-5 text-end">
+            <a href="./login.html"><button class="btn  fw-bold btn-outline-dark"><span><i class="bi bi-person-add"></i></span>&emsp;Login</button></a>
+            <a href="#"><button class="btn  fw-bold btn-outline-dark" onclick="logout()"><span><i class="bi bi-person-dash"></i></span>&emsp;Logout</button></a>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fw-bold rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#">AMIGOS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Courses
+                </a>
+                <ul class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-light" href="#">web development</a></li>
+                  <li><a class="dropdown-item text-light" href="#">Data science</a></li>
+                  <li><a class="dropdown-item text-light" href="#">Devops</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-light" href="#">Others</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#contact">Contact</a>
+              </li>
+              
+            </ul>
+              <input class="form-control me-2 border rounded-pill" type="search" placeholder="Search for anything" aria-label="Search">
+              <button class="btn btn-outline-success text-light" type="submit">Search</button>&emsp;
+              <button class="btn btn-outline-success text-light" type="submit"><span class="p-1"><i class="bi bi-cart4"></i></span></button>
+          </div>
+        </div>
+      </nav>
+
+      <!--advertisement-->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <img src="./assets/offer.png"  alt="" height="500px" width="100%">
+          </div>
+        </div>
+      </div>
+   
+      <div class="container mt-5">
+        <h3 style="font-style: oblique;">Courses that are offering with some additional benefits...</h3>
+        <p class="lead">From critical workplace skills to technical topics, our catalog supports well-rounded professional development.
+        </p>
+      </div>
+
+      <div class="container mt-2 " id="div1">
+        <p>
+        <a href="#web"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" id="btn2" onclick="sub1()" >Web Development<br>7M+ Learners</button></a>
+        <a href="#ang"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" id="btn1" onclick="add()">Angular<br>8M+ Learners</button></a>
+        <a href="#ds"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" onclick="add()">Data science<br>6.3M+ Learners</button></a>
+        <a href="#rs"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" onclick="add()">React js<br>4M+ Learners</button></a>
+        <a href="#ht"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" onclick="add()">HTML5<br>9M+ Learners</button></a>
+        <a href="#cs"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" onclick="add()">CSS3<br>1M+ Learners</button></a>
+        <a href="#ms"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" onclick="add()">MYSQL<br>7.3M+ Learners</button></a>
+        <a href="#js"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" onclick="add()">Java Script<br>5.7M+ Learners</button></a>
+        <a href="#py"><button class="btn btn-light fw-bold border border-1 btn-outline-dark rounded-pill btn-active" onclick="add()">Python<br>18.3M+ Learners</button></a>
+        </p>
+      </div>
+
+      <!--Web Development course-->
+      <div class="container mt-3 webcontent" id="web">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/t1.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">A complete 2024 webdevelopment bootcamp</h5>
+                <p class="card-text text-secondary"><small>By jenny  <span class="fw-bold text-dark" style="float: right;">&#x20B9; 2,999/-</span></small></p>
+                <button class="btn btn-outline-dark"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/t2.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Web Development Masterclass-With Certification</h5>
+                <p class="card-text text-secondary"><small>By Prabakar <span class="fw-bold text-dark" style="float: right;">&#x20B9; 1,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/t3.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Full stack course with proper guidance</h5><br>
+                <p class="card-text text-secondary"><small>By Rajesh<span class="fw-bold text-dark" style="float:right;">&#x20B9; 3,999/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/t4.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Web crash course with aws certification</h5><br>
+                <p class="card-text text-secondary"><small>By anusha <span class="fw-bold text-dark" style="float: right;">&#x20B9; 1,999/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row  mt-3">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/t5.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Practical web development-22 courses</h5><br>
+                <p class="card-text text-secondary"><small>By Mosh <span class="fw-bold text-dark" style="float:right;">&#x20B9; 1,599/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/t6.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Become a certified webdeveloper</h5><br>
+                <p class="card-text text-secondary"><small>By rathika<span class="fw-bold text-dark" style="float: right;">&#x20B9; 2,599/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/t7.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Master Web development with Jaswanth</h5><br>
+                <p class="card-text text-secondary"><small>By Jaswanth<span class="fw-bold text-dark" style="float: right;">&#x20B9; 1,999/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+      <!--angular course-->
+      <div class="container mt-3 angcontent" id="ang">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/a1.png" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Angular 2</h5><br>
+                <p class="card-text text-secondary"><small>By jenny <span class="fw-bold text-dark" style="float: right;">&#x20B9;4,999/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/a2.png" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Angular framework with live projects</h5>
+                <p class="card-text text-secondary"><small>By sneha<span class="fw-bold text-dark" style="float: right;">&#x20B9;1,699/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/a4.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Frontend Framework -Angular</h5>
+                <p class="card-text text-secondary"><small>By Kumar sharma<span class="fw-bold text-dark" style="float: right;">&#x20B9;2,199/-</span></small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/a6.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Angular with certification </h5><br>
+                <p class="card-text text-secondary"><small>By Mouksha<span class="fw-bold text-dark" style="float: right;">&#x20B9;1,199/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mt-3">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/d3.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Angular latest version -16.0</h5><br>
+                <p class="card-text text-secondary"><small>By viraj<span class="fw-bold text-dark" style="float:right;">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/d5.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Full Angular course</h5><br>
+                <p class="card-text text-secondary"><small>By Vaishanavi<span class="fw-bold text-dark" style="float:right">&#x20B9;4,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Datascience-->
+
+      <div class="container mt-3 dscontent" id="ds">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/d2.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Data Mining and Data Wrangling</h5><br>
+                <p class="card-text text-secondary"><small>By sneha.v.m.<span class="fw-bold text-dark" style="float:right">&#x20B9;4,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/f3.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Databases and Big Data Technologies</h5><br>
+                <p class="card-text text-secondary"><small>By raman<span class="fw-bold text-dark" style="float:right">&#x20B9;4,199/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/d4.png" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Unlocking the Power of Data: A Complete Data Science Journey</h5>
+                <p class="card-text text-secondary"><small>By giridhar<span class="fw-bold text-dark" style="float:right">&#x20B9;6,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/f5.png" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">The Complete Data Science Bootcamp: Learn, Practice, Excel</h5>
+                <p class="card-text text-secondary"><small>By Vaishanavi<span class="fw-bold text-dark" style="float:right">&#x20B9;4,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-between mt-3">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/d6.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Data Science Fundamentals: Building Blocks for Success</h5><br>
+                <p class="card-text text-secondary"><small>By Rohit<span class="fw-bold text-dark" style="float:right">&#x20B9;8,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--React js-->
+      <div class="container mt-3 rscontent" id="rs">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/r2.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">React.js Fundamentals: Building Dynamic Web Apps</h5>
+                <p class="card-text text-secondary"><small>By sushnath<span class="fw-bold text-dark" style="float:right">&#x20B9;1,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/r3.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Mastering React.js: A Comprehensive Course for Beginners</h5>
+                <p class="card-text text-secondary"><small>By teja<span class="fw-bold text-dark" style="float:right">&#x20B9;4,799/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/r4.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">React.js Essentials: From Basics to Advanced Techniques</h5>
+                <p class="card-text text-secondary"><small>By kamlesh<span class="fw-bold text-dark" style="float:right">&#x20B9;3,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/r6.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">The Complete React.js Bootcamp: Hands-On Projects Included</h5>
+                <p class="card-text text-secondary"><small>By govind<span class="fw-bold text-dark" style="float:right">&#x20B9;5,499/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mt-3">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/r5.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">React.js Mastery: Crafting Modern User Interfaces</h5><br>
+                <p class="card-text text-secondary"><small>By lakshmi<span class="fw-bold text-dark" style="float:right">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/r7.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Dive into React.js: Creating Interactive Web Applications</h5>
+                <p class="card-text text-secondary"><small>By susmitha<span class="fw-bold text-dark" style="float:right">&#x20B9;3,499/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/r8.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">React.js for Beginners: A Step-by-Step Guide to Front-End Development</h5>
+                <p class="card-text text-secondary"><small>By chandhu<span class="fw-bold text-dark" style="float:right">&#x20B9;4,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--Html5-->
+      <div class="container mt-3 htcontent" id="ht">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/html1.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">HTML Essentials: Building Blocks of Web Developmen</h5><br>
+                <p class="card-text text-secondary"><small>By shuhas<span class="fw-bold text-dark" style="float:right">&#x20B9;1,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/html2.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Mastering HTML: A Comprehensive Guide for Beginners</h5>
+                <p class="card-text text-secondary"><small>By Vaishanavi<span class="fw-bold text-dark" style="float:right">&#x20B9;999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/html3.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">HTML Fundamentals: Learn to Create Stunning Websites</h5>
+                <p class="card-text text-secondary"><small>By sanjay<span class="fw-bold text-dark" style="float:right">&#x20B9;1,499/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/html4.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Unlocking HTML: From Basics to Advanced Techniques</h5>
+                <p class="card-text text-secondary"><small>By praveen<span class="fw-bold text-dark" style="float:right">&#x20B9;499/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+<!--css3-->
+
+      <div class="container mt-3 cscontent" id="cs">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/css1.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Mastering CSS: From Basics to Advanced Techniques</h5><br>
+                <p class="card-text text-secondary"><small>By kamal<span class="fw-bold text-dark" style="float:right">&#x20B9;5,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/css2.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Unlocking the Power of CSS: A Comprehensive Course</h5>
+                <p class="card-text text-secondary"><small>By Yamini<span class="fw-bold text-dark" style="float:right">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/css3.webp" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">CSS Wizardry: Crafting Stunning Web Designs</h5><br>
+                <p class="card-text text-secondary"><small>By rakhi<span class="fw-bold text-dark" style="float:right">&#x20B9;3,799/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/css4.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">CSS Mastery: Elevate Your Front-End Development Skills</h5>
+                <p class="card-text text-secondary"><small>By suraj<span class="fw-bold text-dark" style="float:right">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-between mt-3">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/css5.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">The Complete CSS Bootcamp: Designing Responsive Websites</h5>
+                <p class="card-text text-secondary"><small>By Vaishanavi<span class="fw-bold text-dark" style="float:right">&#x20B9;3,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Mysql-->
+      <div class="container mt-3 mscontent" id="ms">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/sql1.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">MySQL Mastery: A Comprehensive Guide to Database Management</h5>
+                <p class="card-text text-secondary"><small>By Vaishu<span class="fw-bold text-dark" style="float:right">&#x20B9;4,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/sql2.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">MySQL Essentials: Building Strong Database Foundations</h5>
+                <p class="card-text text-secondary"><small>By Vaishanavi<span class="fw-bold text-dark" style="float:right">&#x20B9;3,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/sql3.jpg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Unlocking MySQL: Dive Deep into Database Management</h5>
+                <p class="card-text text-secondary"><small>By uma<span class="fw-bold text-dark" style="float:right">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/sql4.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">MySQL Pro: Advanced Techniques for Database Optimization</h5>
+                <p class="card-text text-secondary"><small>By kumari<span class="fw-bold text-dark" style="float:right">&#x20B9;1,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mt-3">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/sql5.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">MySQL Ninja: Expert Strategies for Efficient Data Handling</h5>
+                <p class="card-text text-secondary"><small>By vishnu<span class="fw-bold text-dark" style="float:right">&#x20B9;3,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/sql6.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">MySQL Magic: Crafting Dynamic and Scalable Databases</h5>
+                <p class="card-text text-secondary"><small>By akhil<span class="fw-bold text-dark" style="float:right">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!--JS-->
+      <div class="container mt-3 jscontent" id="js">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/js1.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">JavaScript Essentials: Building Dynamic Websites</h5><br>
+                <p class="card-text text-secondary"><small>By jeniffer<span class="fw-bold text-dark" style="float:right">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/js2.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Unlocking the Power of JavaScript: A Comprehensive Guide</h5>
+                <p class="card-text text-secondary"><small>By john<span class="fw-bold text-dark" style="float:right">&#x20B9;3,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/js3.png" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">JavaScript for Web Development: The Complete Course</h5>
+                <p class="card-text text-secondary"><small>By srikanth<span class="fw-bold text-dark" style="float:right">&#x20B9;6,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/js4.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">JavaScript Wizardry: Crafting Interactive User Experiences</h5>
+                <p class="card-text text-secondary"><small>By Vamsi<span class="fw-bold text-dark" style="float:right">&#x20B9;8,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        </div>
+      </div>
+
+      <!--python-->
+      <div class="container mt-3 pycontent" id="py">
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/py1.webp" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Python Programming Essentials: A Comprehensive Course</h5>
+                <p class="card-text text-secondary"><small>By vaibhav<span class="fw-bold text-dark" style="float:right">&#x20B9;3,799/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/python2.png" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">The Complete Python Bootcamp: Learn to Code Like a Pro</h5>
+                <p class="card-text text-secondary"><small>By hartley<span class="fw-bold text-dark" style="float:right">&#x20B9;1,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/python3.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Mastering Python: Unlock the Full Potential of Programming</h5>
+                <p class="card-text text-secondary"><small>By jack leach<span class="fw-bold text-dark" style="float:right">&#x20B9;3,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/python4.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Python for Data Science: Analyze, Visualize, and Manipulate Data</h5>
+                <p class="card-text text-secondary"><small>By pope<span class="fw-bold text-dark" style="float:right">&#x20B9;2,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-between mt-3">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/python5.jpeg" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Python for Web Development: Build Dynamic Websites and Applications</h5>
+                <p class="card-text text-secondary"><small>By krishna<span class="fw-bold text-dark" style="float:right">&#x20B9;4,999/-</span> </small></p>
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart </button>
+                <button class="btn btn-outline-dark" style="float: right;" data-bs-toggle="modal" data-bs-target="#buy">Buy Now </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Button -->
+      <div class="container mt-3">
+        <button class="btn btn-light fw-bold border border-1 btn-outline-dark">Show All Development Courses</button>
+      </div>
+
+      <!--contact-->
+      <section id="contact" class="mt-3">
+        <div class="container-lg">
+          <div class="text-center">
+            <h2>Get in Touch</h2>
+            <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
+          </div>
+        
+          <div class="row justify-content-center my-5">
+            <div class="col-lg-6">
+              <form>
+                <label for="email" class="form-label">Email Address:</label>
+                <div class="mb-4 input-group">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input type="email" class="form-control" id="email" placeholder="E.G.abc@gmail.com">
+                </div>
+                
+                <label for="name" class="form-label">Name:</label>
+                <div class="mb-4 input-group">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill-check"></i></span>
+                <input type="text" class="form-control" id="name" placeholder="E.G.Jaswanth">
+                </div>
+  
+  
+                <div class="mt-3">
+                  <label for="select" class="form-label">What is your question about?</label>
+                  <div class="mb-4 input-group">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-chat-right-text-fill"></i></span>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Select the query Related to</option>
+                  <option value="1">Pricing</option>
+                  <option value="2">Booking</option>
+                  <option value="3">content</option>
+                </select>
+                </div>
+  
+                <div class="form-floating mt-3">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 140px;"></textarea>
+                  <label for="floatingTextarea">write your query here</label>
+                </div>
+  
+                <div class="mt-3 text-center">
+                  <button type="submit" class="btn btn-secondary">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+  
+  
+        </div>
+      </section>
+
+      <!--Footer-->
+      <footer>
+        <div class="container-fluid" style="background-color: black;color: white;">
+          <div class="row">
+            <div class="col-8" style="padding-top: 10px;">
+              <span class="footer-links">ABOUT</span>
+              <span class="footer-links">GIFT CARD</span>
+              <span class="footer-links">FEEDBACK</span>
+              <span class="footer-links">CONTACT US</span>
+              <span class="footer-links">BRAND T & C</span>
+              <span class="footer-links">OFFERS T & C</span>
+              <span class="footer-links">SITE MAP</span>
+              <span class="footer-links">FIND </span>
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-3 text-end">
+              <img height="37px" width="96px" src="./assets/google.png" style="padding-top: 10px;" />
+              <img height="37px" width="96px" src="./assets/app.png" style="padding-top: 10px;" />
+            </div>
+          </div>
+          <hr class="horizontal-line">
+          <div class="row">
+            <div class="col-6">
+              <img height="30px" width="40px" src="./assets/facebook.png" style="padding-left: 10px;">
+              <img height="30px" width="60px" src="./assets/instagram.png" style="padding-left: 30px;">
+              <img height="30px" width="75px" src="https://c4.wallpaperflare.com/wallpaper/94/253/252/technology-youtube-logo-hd-wallpaper-preview.jpg" style="padding-left: 30px;">
+            </div>
+            <div class="col-6">
+              <small style="float: right;">© Copyright 2021 job Portal. All Rights Reserved.</small>
+            </div>
+          </div>
+          <br>
+          <div class="text-center">
+            <small>
+              The platform hosts a diverse catalog of courses spanning different subjects and skill levels, ranging from programming languages like Python, to business management, design, marketing, and more.
+            </small>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+         function add(){
+          document.getElementById("web").style.display="none"
+         }
+
+         function sub1(){
+          document.getElementById("web").style.display="block"
+         }
+
+         function sub(){
+			var a1=document.getElementById("validationCustom01").value;
+			var a2=document.getElementById("validationCustom03").value;
+			
+      var a4=document.getElementById("validationCustom05").value;
+			if (a1=="" && a2=="" && a4==""){
+				document.getElementById("place1").style.color="red";
+				document.getElementById("place2").style.color="red";
+				document.getElementById("place1").innerHTML="ERROR!!!";
+				document.getElementById("place2").innerHTML="Enter form accurately!!!";
+			}
+			else if (a1!="" && a2!="" && a4!=""){
+				document.getElementById("place1").style.color="green";
+				document.getElementById("place2").style.color="green";
+				document.getElementById("place1").innerHTML="SUCCESS!!!";
+				document.getElementById("place2").innerHTML="ORDER PLACED!!!";
+			}
+		}
+
+    function logout(){
+      var a="Confirm to logout"
+      window.confirm(a);
+    }
+      </script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body text-center item-align-center">
+        <h6 class="text-success" style="font-style: italic; " id="modalani"><span id="span1"><i class="bi bi-cart-check-fill"></i></span>Item added Successfully!!!</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal for buy-->
+<div class="modal fade" id="buy" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" id="place1">
+        <h4 class="modal-title" id="myModalLabel">Let's Celebrate!</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="place2">
+
+        <form class="row g-3" autocomplete="off" name="hello-sheet">
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Your name</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Mark" required name="name">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email" name="email">
+            <div class="invalid-feedback">
+              Please provide a valid Email Address
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Address</label>
+            <input type="text" class="form-control" id="validationCustom03" required minlength="20" name="address">
+            <div class="invalid-feedback">
+              Address should be atleast 20 characters
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input type="" class="form-control" id="validationCustom05" required pattern="[0-9]{6}" maxlength="6"
+              name="pin">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button id="btnp" class="btn btn-primary" type="submit" name="submit" onclick="sub()">Place Order</button>
+          </div>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
